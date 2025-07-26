@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Inversiones - ECOPREP</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ECOPREP</h1>
+                <p>Finanzas para todos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="educacion.html">Educación Financiera</a></li>
+                    <li class="dropdown">
+                        <a href="#">Calculadoras <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="calculadora-inversiones.html" class="active">Inversiones</a></li>
+                            <li><a href="calculadora-intereses.html">Intereses</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-subpage">
+        <div class="container">
+            <h1>Calculadora de Inversiones</h1>
+            <p>Proyecta el crecimiento de tu dinero con diferentes escenarios de inversión</p>
+        </div>
+    </section>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Inicio</a> > <a href="#">Calculadoras</a> > <span>Inversiones</span>
+        </div>
+    </section>
+
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h2>Simulador de Inversión</h2>
+                    <form id="investment-form">
+                        <div class="form-group">
+                            <label for="initial-amount">Monto inicial de inversión ($):</label>
+                            <input type="number" id="initial-amount" min="0" step="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="monthly-contribution">Aportación mensual ($):</label>
+                            <input type="number" id="monthly-contribution" min="0" step="100" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="annual-rate">Tasa de interés anual (%):</label>
+                            <input type="number" id="annual-rate" min="0" max="100" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="years">Período de inversión (años):</label>
+                            <input type="number" id="years" min="1" max="50" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="compound-frequency">Frecuencia de capitalización:</label>
+                            <select id="compound-frequency">
+                                <option value="1">Anual</option>
+                                <option value="2">Semestral</option>
+                                <option value="4">Trimestral</option>
+                                <option value="12" selected>Mensual</option>
+                                <option value="365">Diaria</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tax-rate">Tasa de impuestos (%):</label>
+                            <input type="number" id="tax-rate" min="0" max="100" step="0.1" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="inflation-rate">Tasa de inflación anual esperada (%):</label>
+                            <input type="number" id="inflation-rate" min="0" max="100" step="0.1" value="3">
+                        </div>
+                        <button type="submit" class="btn">Calcular</button>
+                        <button type="reset" class="btn btn-secondary">Limpiar</button>
+                    </form>
+                </div>
+                <div class="calculator-results">
+                    <h2>Resultados de la Inversión</h2>
+                    <div class="results-container">
+                        <div class="result-card">
+                            <h3>Monto Final</h3>
+                            <p id="final-amount">$0.00</p>
+                            <p class="result-label">Valor futuro de tu inversión</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Ganancias</h3>
+                            <p id="earnings">$0.00</p>
+                            <p class="result-label">Intereses generados</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Total Aportado</h3>
+                            <p id="total-contributed">$0.00</p>
+                            <p class="result-label">Capital invertido</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Valor ajustado por inflación</h3>
+                            <p id="inflation-adjusted">$0.00</p>
+                            <p class="result-label">Poder adquisitivo real</p>
+                        </div>
+                    </div>
+                    <div class="results-table">
+                        <h3>Proyección Anual</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Año</th>
+                                    <th>Saldo Inicial</th>
+                                    <th>Aportaciones</th>
+                                    <th>Intereses</th>
+                                    <th>Saldo Final</th>
+                                </tr>
+                            </thead>
+                            <tbody id="yearly-results">
+                                <!-- Los resultados anuales se insertarán aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="investment-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="investment-tips">
+        <div class="container">
+            <h2>Consejos para Invertir</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Comienza temprano</h3>
+                    <p>El interés compuesto funciona mejor con el tiempo. Incluso pequeñas cantidades pueden crecer significativamente.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Diversifica</h3>
+                    <p>No pongas todos tus huevos en una canasta. Distribuye tu inversión para reducir riesgos.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Enfócate en el largo plazo</h3>
+                    <p>Las inversiones generalmente dan mejores resultados cuando se mantienen por años o décadas.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Edúcate</h3>
+                    <p>Antes de invertir, aprende sobre los diferentes instrumentos y sus riesgos asociados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>ECOPREP</h3>
+                    <p>Educación financiera para todos</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="educacion.html">Educación Financiera</a></li>
+                        <li><a href="calculadora-inversiones.html">Calculadora de Inversiones</a></li>
+                        <li><a href="calculadora-intereses.html">Calculadora de Intereses</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@ecoprep.com</li>
+                        <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ECOPREP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calculadoras.js"></script>
+</body>
+</html>

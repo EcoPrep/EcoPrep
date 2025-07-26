@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOPREP - Educación Financiera para Todos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos específicos para la sección del método */
+        .method-section {
+            padding: 80px 0;
+            background-color: #1a365d;
+            color: white;
+        }
+        .method-section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .method-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .method-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .method-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .method-card h3 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #48bb78;
+        }
+        .method-card h4 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: white;
+        }
+        .method-card ul {
+            list-style: none;
+            text-align: left;
+            padding-left: 0;
+        }
+        .method-card ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .method-card ul li:before {
+            content: "•";
+            color: #48bb78;
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        @media (max-width: 768px) {
+            .method-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ECOPREP</h1>
+                <p>Finanzas para todos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="educacion.html">Educación Financiera</a></li>
+                    <li class="dropdown">
+                        <a href="#">Calculadoras <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="calculadora-inversiones.html">Inversiones</a></li>
+                            <li><a href="calculadora-intereses.html">Intereses</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Educación financiera al alcance de todos</h1>
+            <p>Empieza a aprender hoy mismo y toma el control de tus finanzas personales</p>
+            <a href="educacion.html" class="btn">Comenzar</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Nuestra Misión</h2>
+            <p>Brindar recursos accesibles y comprensibles para mejorar tu educación financiera, ayudándote a tomar decisiones informadas para tu futuro económico.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-card">
+                <div class="icon">%</div>
+                <h3>Ahorro</h3>
+                <p>Aprende estrategias efectivas para ahorrar y construir un futuro financiero seguro.</p>
+                <a href="educacion.html#ahorro">Leer más</a>
+            </div>
+            <div class="feature-card">
+                <div class="icon">%</div>
+                <h3>Inversiones</h3>
+                <p>Descubre cómo hacer que tu dinero trabaje para ti mediante inversiones inteligentes.</p>
+                <a href="educacion.html#inversiones">Leer más</a>
+            </div>
+            <div class="feature-card">
+                <div class="icon">+1</div>
+                <h3>Presupuesto</h3>
+                <p>Domina el arte de crear y mantener un presupuesto que funcione para ti.</p>
+                <a href="educacion.html#presupuesto">Leer más</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="calculators">
+        <div class="container">
+            <h2>Herramientas Financieras</h2>
+            <div class="calculator-grid">
+                <div class="calc-card">
+                    <h3>Calculadora de Intereses</h3>
+                    <p>Simulador de préstamos y créditos</p>
+                    <a href="calculadora-intereses.html" class="btn">Usar ahora</a>
+                </div>
+                <div class="calc-card">
+                    <h3>Calculadora de Inversión</h3>
+                    <p>Proyecta el crecimiento de tus inversiones</p>
+                    <a href="calculadora-inversiones.html" class="btn">Usar ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <h2>Noticias y Análisis</h2>
+            <div class="news-grid">
+                <article>
+                    <h3>Cómo planificar tu retiro</h3>
+                    <p class="date">10 de marzo de 2023</p>
+                    <p>Descubre estrategias para asegurar un retiro cómodo y sin preocupaciones financieras.</p>
+                    <a href="#">Leer más</a>
+                </article>
+                <article>
+                    <h3>Impacto de la inflación en América Latina</h3>
+                    <p class="date">6 de marzo de 2023</p>
+                    <p>Análisis de los efectos económicos en diferentes sectores y cómo proteger tus finanzas.</p>
+                    <a href="#">Leer más</a>
+                </article>
+            </div>
+            <a href="#" class="see-more">Ver más artículos</a>
+        </div>
+    </section>
+
+    <section class="method-section">
+        <div class="container">
+            <h2>Método 50/30/20</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h3>50%</h3>
+                    <h4>Necesidades</h4>
+                    <ul>
+                        <li>Renta o Hipoteca</li>
+                        <li>Alimentos</li>
+                        <li>Servicios Básicos</li>
+                        <li>Transporte</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <h3>30%</h3>
+                    <h4>Deseos</h4>
+                    <ul>
+                        <li>Restaurantes</li>
+                        <li>Suscripciones</li>
+                        <li>Ocio</li>
+                        <li>Compras</li>
+                    </ul>
+                </div>
+                <div class="method-card">
+                    <h3>20%</h3>
+                    <h4>Ahorro y pago de deudas</h4>
+                    <ul>
+                        <li>Fondo de emergencia</li>
+                        <li>Jubilación</li>
+                        <li>Pago de deudas pendientes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>ECOPREP</h3>
+                    <p>Educación financiera para todos</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="educacion.html">Educación Financiera</a></li>
+                        <li><a href="calculadora-inversiones.html">Calculadora de Inversiones</a></li>
+                        <li><a href="calculadora-intereses.html">Calculadora de Intereses</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@ecoprep.com</li>
+                        <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ECOPREP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

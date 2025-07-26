@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ECOPREP</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ECOPREP</h1>
+                <p>Finanzas para todos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="educacion.html">Educación Financiera</a></li>
+                    <li class="dropdown">
+                        <a href="#">Calculadoras <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="calculadora-inversiones.html">Inversiones</a></li>
+                            <li><a href="calculadora-intereses.html">Intereses</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-subpage">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>Estamos aquí para ayudarte con cualquier duda sobre finanzas personales</p>
+        </div>
+    </section>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Inicio</a> > <span>Contacto</span>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h2>Envíanos un mensaje</h2>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre completo:</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono (opcional):</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto:</label>
+                            <select id="subject">
+                                <option value="consulta">Consulta general</option>
+                                <option value="soporte">Soporte técnico</option>
+                                <option value="colaboracion">Colaboración</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje:</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h2>Información de contacto</h2>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Dirección</h3>
+                        <p>Av. Reforma 123, Col. Juárez</p>
+                        <p>Ciudad de México, 06600</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Teléfonos</h3>
+                        <p>+52 55 1234 5678</p>
+                        <p>Lunes a Viernes: 9:00 - 18:00</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Correo electrónico</h3>
+                        <p>info@ecoprep.com</p>
+                        <p>soporte@ecoprep.com</p>
+                    </div>
+                    <div class="social-links">
+                        <h3>Síguenos en redes sociales</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>¿Qué es ECOPREP?</h3>
+                    <p>ECOPREP es una plataforma educativa sobre economía y finanzas personales, creada para ayudar a las personas a tomar mejores decisiones financieras.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>¿Es gratuito el contenido?</h3>
+                    <p>Sí, todo el contenido educativo y las herramientas de cálculo en nuestro sitio son completamente gratuitas.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>¿Ofrecen asesoría financiera personalizada?</h3>
+                    <p>No brindamos asesoría financiera personalizada. Nuestro contenido es educativo y general. Para asesoría específica, recomendamos consultar con un profesional certificado.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>¿Cómo puedo colaborar con el proyecto?</h3>
+                    <p>Si deseas colaborar con contenido, traducciones o desarrollo, escríbenos a colaboraciones@ecoprep.com detallando tu propuesta.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>¿Dónde puedo reportar un error en el sitio?</h3>
+                    <p>Puedes reportar cualquier error técnico o de contenido a soporte@ecoprep.com, indicando la página y descripción del problema.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>¿Tienen aplicación móvil?</h3>
+                    <p>Actualmente solo tenemos versión web responsive que se adapta a dispositivos móviles. Estamos trabajando en una aplicación nativa para el futuro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>ECOPREP</h3>
+                    <p>Educación financiera para todos</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="educacion.html">Educación Financiera</a></li>
+                        <li><a href="calculadora-inversiones.html">Calculadora de Inversiones</a></li>
+                        <li><a href="calculadora-intereses.html">Calculadora de Intereses</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@ecoprep.com</li>
+                        <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ECOPREP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

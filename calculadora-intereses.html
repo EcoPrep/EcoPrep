@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Intereses - ECOPREP</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ECOPREP</h1>
+                <p>Finanzas para todos</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="educacion.html">Educación Financiera</a></li>
+                    <li class="dropdown">
+                        <a href="#">Calculadoras <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="calculadora-inversiones.html">Inversiones</a></li>
+                            <li><a href="calculadora-intereses.html" class="active">Intereses</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-subpage">
+        <div class="container">
+            <h1>Calculadora de Intereses</h1>
+            <p>Simula diferentes escenarios de préstamos y créditos</p>
+        </div>
+    </section>
+
+    <section class="breadcrumbs">
+        <div class="container">
+            <a href="index.html">Inicio</a> > <a href="#">Calculadoras</a> > <span>Intereses</span>
+        </div>
+    </section>
+
+    <section class="calculator-section">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h2>Simulador de Préstamo</h2>
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <label for="loan-amount">Monto del préstamo ($):</label>
+                            <input type="number" id="loan-amount" min="0" step="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest-rate">Tasa de interés anual (%):</label>
+                            <input type="number" id="interest-rate" min="0" max="100" step="0.1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loan-term">Plazo del préstamo:</label>
+                            <div class="term-input">
+                                <input type="number" id="loan-term" min="1" required>
+                                <select id="term-type">
+                                    <option value="12">Meses</option>
+                                    <option value="1" selected>Años</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment-frequency">Frecuencia de pagos:</label>
+                            <select id="payment-frequency">
+                                <option value="12">Mensual</option>
+                                <option value="24">Quincenal</option>
+                                <option value="52">Semanal</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date">Fecha de inicio:</label>
+                            <input type="date" id="start-date">
+                        </div>
+                        <button type="submit" class="btn">Calcular</button>
+                        <button type="reset" class="btn btn-secondary">Limpiar</button>
+                    </form>
+                </div>
+                <div class="calculator-results">
+                    <h2>Resultados del Préstamo</h2>
+                    <div class="results-container">
+                        <div class="result-card">
+                            <h3>Pago Periódico</h3>
+                            <p id="periodic-payment">$0.00</p>
+                            <p class="result-label">Cantidad a pagar cada periodo</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Total de Intereses</h3>
+                            <p id="total-interest">$0.00</p>
+                            <p class="result-label">Costo total del crédito</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Total a Pagar</h3>
+                            <p id="total-payment">$0.00</p>
+                            <p class="result-label">Capital + intereses</p>
+                        </div>
+                        <div class="result-card">
+                            <h3>Fecha de Finalización</h3>
+                            <p id="end-date">--/--/----</p>
+                            <p class="result-label">Último pago estimado</p>
+                        </div>
+                    </div>
+                    <div class="results-table">
+                        <h3>Tabla de Amortización</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pago #</th>
+                                    <th>Fecha</th>
+                                    <th>Pago</th>
+                                    <th>Capital</th>
+                                    <th>Interés</th>
+                                    <th>Saldo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="amortization-table">
+                                <!-- La tabla de amortización se insertará aquí -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="loan-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="loan-tips">
+        <div class="container">
+            <h2>Consejos para Endeudamiento Responsable</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-percentage"></i>
+                    <h3>Compara tasas</h3>
+                    <p>Antes de contratar un crédito, compara las tasas de interés de diferentes instituciones.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Lee el contrato</h3>
+                    <p>Asegúrate de entender todos los términos y condiciones antes de firmar.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>No te sobreendeudes</h3>
+                    <p>No pidas más de lo que realmente necesitas y puedas pagar cómodamente.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-piggy-bank"></i>
+                    <h3>Pagos anticipados</h3>
+                    <p>Si es posible, realiza pagos adicionales para reducir el interés total.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3>ECOPREP</h3>
+                    <p>Educación financiera para todos</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="educacion.html">Educación Financiera</a></li>
+                        <li><a href="calculadora-inversiones.html">Calculadora de Inversiones</a></li>
+                        <li><a href="calculadora-intereses.html">Calculadora de Intereses</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@ecoprep.com</li>
+                        <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ECOPREP. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/calculadoras.js"></script>
+</body>
+</html>
