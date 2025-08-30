@@ -6,6 +6,57 @@
     <title>Educación Financiera - ECOPREP</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos adicionales para el menú desplegable */
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        
+        .dropdown-menu li {
+            padding: 8px 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .dropdown-menu li:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-menu li:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .dropdown-menu a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-menu h4 {
+            padding: 8px 15px;
+            margin: 0;
+            color: #2c3e50;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            background-color: #f9f9f9;
+        }
+        
+        .dropdown-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,41 +68,36 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li class="dropdown mega-menu">
+                    <li class="dropdown">
                         <a href="educacion.html" class="active">TEMAS <i class="fas fa-chevron-down"></i></a>
-                        <div class="mega-menu-content">
-                            <div class="mega-menu-column">
-                                <h4>Conceptos Básicos</h4>
-                                <ul>
-                                    <li><a href="#basicos">Fundamentos económicos</a></li>
-                                    <li><a href="#oferta-demanda">Oferta y demanda</a></li>
-                                    <li><a href="#bienes-servicios">Bienes y servicios</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h4>Ahorro</h4>
-                                <ul>
-                                    <li><a href="#ahorro">Estrategias</a></li>
-                                    <li><a href="#metodo-50-30-20">Método 50/30/20</a></li>
-                                    <li><a href="#finanzas-personales">Finanzas personales</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h4>Inversiones</h4>
-                                <ul>
-                                    <li><a href="#inversiones">Cómo invertir</a></li>
-                                    <li><a href="#tipos-inversion">Tipos de inversión</a></li>
-                                    <li><a href="#riesgo-rendimiento">Riesgo y rendimiento</a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-menu-column">
-                                <h4>Presupuesto</h4>
-                                <ul>
-                                    <li><a href="#presupuesto">Cómo crearlo</a></li>
-                                    <li><a href="#consumo-inteligente">Consumo inteligente</a></li>
-                                    <li><a href="#control-gastos">Control de gastos</a></li>
-                                </ul>
-                            </div>
+                        <div class="dropdown-menu">
+                            <h4>Conceptos Básicos</h4>
+                            <ul>
+                                <li><a href="#basicos">Fundamentos económicos</a></li>
+                                <li><a href="#oferta-demanda">Oferta y demanda</a></li>
+                                <li><a href="#bienes-servicios">Bienes y servicios</a></li>
+                            </ul>
+                            
+                            <h4>Estrategias</h4>
+                            <ul>
+                                <li><a href="#metodo-50-30-20">Método 50/30/20</a></li>
+                                <li><a href="#finanzas-personales">Finanzas personales</a></li>
+                                <li><a href="#inversiones">Inversiones</a></li>
+                            </ul>
+                            
+                            <h4>Cómo invertir</h4>
+                            <ul>
+                                <li><a href="#tipos-inversion">Tipos de inversión</a></li>
+                                <li><a href="#riesgo-rendimiento">Riesgo y rendimiento</a></li>
+                                <li><a href="#presupuesto">Presupuesto</a></li>
+                            </ul>
+                            
+                            <h4>Consumo inteligente</h4>
+                            <ul>
+                                <li><a href="#consumo-inteligente">Cómo crearlo</a></li>
+                                <li><a href="#control-gastos">Control de gastos</a></li>
+                                <li><a href="#ahorro">Ahorro</a></li>
+                            </ul>
                         </div>
                     </li>
                     <li class="dropdown">
@@ -386,19 +432,23 @@
                 <div class="footer-contact">
                     <h4>Contacto</h4>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> info@ecoprep.com</li>
-                        <li><i class="fas fa-phone"></i> +52 55 1234 5678</li>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ecoprep.contacto@gmail.com" target="_blank">
+  ecoprep.contacto@gmail.com
+</a>
                         <li><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</li>
                     </ul>
                 </div>
                 <div class="footer-social">
                     <h4>Síguenos</h4>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/ecoprep_014?igsh=MTJidjd3N2Juc3JudQ==" target="_blank">
+  <i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.tiktok.com/@ecoprep56?_t=ZS-8zItElz9GCu&_r=1" target="_blank">
+  <i class="fab fa-tiktok"></i>
+</a>
+
                     </div>
                 </div>
             </div>
