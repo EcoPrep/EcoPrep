@@ -1421,3 +1421,8 @@ footer {
         font-size: 0.95rem;
     }
 }
+.logo-img {
+    width: 100px;   /* ancho deseado */
+    height: auto;   /* mantiene proporción */
+    display: block; /* evita problemas de alineación */
+}
